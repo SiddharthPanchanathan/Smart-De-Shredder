@@ -1,5 +1,7 @@
-The Smart-De-Shredder tries to glue the randomly ordered shreds together in the right 
-order so as to reconstruct the original image. As far as reassembling the shreds in the 
-right order, note that when we ìcutî the orginal image into
-vertical strips, the pixels along the right edge of the ìleftî strip should be very 
-similar to the pixels along the left edge of the ìrightî strip. 
+Smart-De-Shredder tries to glue the randomly ordered shreds together in the right order so as to reconstruct 
+the original image. We assume that in the original image, there is a black border along the left edge.
+That identiÔ¨Åes the left most shred. As far as reassembling the shreds in the right order, when we 
+‚Äúcut‚Äù the orginal image into vertical strips, the pixels along the right edge of the ‚Äúleft‚Äù strip are
+very similar to the pixels along the left edge of the ‚Äúright‚Äù strip. Thus, as we glue the strips together 
+one-by-one left-to-right, we look among the remaining strips for that strip whose left edge looks the most like 
+the right edge of the last strip glued in.
